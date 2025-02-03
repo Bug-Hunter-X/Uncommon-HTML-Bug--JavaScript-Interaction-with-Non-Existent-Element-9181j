@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly attempting to modify the content of a non-existent element
+    document.getElementById("nonExistentDiv").innerHTML = "This text should NOT be visible";
+    document.getElementById("myDiv").style.display = "none"; //This will hide the div
+  </script>
+</body>
+</html>
