@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    const element = document.getElementById("nonExistentDiv");
+    if (element) {
+      element.innerHTML = "This text should NOT be visible";
+    } else {
+      console.warn("Element 'nonExistentDiv' not found.");
+    }
+    document.getElementById("myDiv").style.display = "none"; //This will hide the div
+  </script>
+</body>
+</html>
